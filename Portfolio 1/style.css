@@ -1,6 +1,8 @@
 body{
 padding: 0;
 margin: 0;
+background-color: rgb(233, 233, 233);
+font-family: 'Ubuntu', sans-serif;
 }
 .parent {
     display: grid;
@@ -10,40 +12,178 @@ margin: 0;
     grid-row-gap: 0px;
     height: 100vh;
     width: 100vw;
+    
     }
 
     
     .div1 { grid-area: 1 / 1 / 2 / 3; 
    
-    background-color: black ;
+    background-color: rgb(233, 233, 233) ;
+    font-size:0.5cm;
+    margin: 0;
+    padding: 0;
+    text-align: center;
     
     }
     .div2 { grid-area: 1 / 11 / 2 / 13;
-        background-color: yellow; }
+        background-color: rgb(233, 233, 233) ; 
+        font-size:0.5cm;
+        margin: 0;
+        padding: 0;
+        text-align: center;}
     .div3 { grid-area: 1 / 3 / 2 / 11;
-        width: 100%;
-        height: 100%; }
+        margin-top:0.7rem ;
+        text-align: center;
+        background-color: rgb(233, 233, 233) ;
+        
+  
+    }
+
+    hr {
+        
+        border: 10px solid black;
+
+    }
+
+      
     .div4 { grid-area: 2 / 1 / 13 / 2;
         width: 100%;
-        height: 100%; }
+        height: 100%; 
+        
+        
+        
+    }
+    .div4::before {
+        content: '';
+        position: absolute;
+        left: 6%;
+        top: 0;
+        bottom: 0;
+        width: 12px; /* Adjust the width of the line as needed */
+        background-color: black;
+        transform: translateX(-50%);
+        z-index: -1;
+   
+      }
+   
     .div5 { grid-area: 2 / 2 / 3 / 5;
         width: 100%;
-        height: 100%; }
+        height: 100%; 
+        text-align: center;
+        font-size: 0.55cm;
+    }
     .div6 { grid-area: 4 / 3 / 7 / 12; 
         width: 100%;
-        height: 100%;}
+        height: 100%;
+        background-color: rgb(179, 179, 179);
+        box-shadow: -10px 10px 1px black;
+        text-align:left;
+        display: flex;
+        align-items: center;
+        
+        line-height: 1.6rem;        
+    }
+    .div6 h3 {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
     .div7 { grid-area: 8 / 3 / 12 / 12;
         width: 100%;
-        height: 100%; }
+        height: 100%;
+       
+        display: flex;
+        justify-content: space-between; /* Spread the boxes apart */
+    }
+    .box {
+        width: calc(22.33% - 3px); /* Adjust the width and spacing as needed */
+        padding: 20px;
+        background-color: rgb(179, 179, 179);/* Box color */
+        box-shadow: -10px 10px 1px black; /* Add a shadow to the boxes */
+        text-align: center;
+        display: flex; /* Use flex display for vertical centering */
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center vertically */
+      }
 
-    /* .parent2 {
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
+      @media (max-width: 768px) {
+        .parent,.div1,.div2,.div3,.div4,.div5,.div6,.div7,.box{
+            all:unset;
         }
-        
-    .div12 { grid-area: 2 / 2 / 4 / 4; }
-    .div22 { grid-area: 2 / 5 / 4 / 7; }
-    .div32 { grid-area: 2 / 8 / 4 / 10; } */
+        body{
+            font-size: 0.89rem;
+            margin: 0;
+            padding: 0;
+        }
+        .div3,
+  .div4 {
+    display: none;
+  }
+ 
+  .parent{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+.div1,.div2{
+    
+    margin: 0;
+    padding: 0;
+    width: 9rem;
+    height: 3rem;
+    align-self: center;
+    text-align: center;
+    
+    background-color: rgb(201, 200, 200);
+    box-shadow: -10px 10px 1px black;
+}
+.div2{
+    border-top: 5px solid black;
+    box-shadow: -10px 10px 1px rgb(79, 79, 79);
+}
+ .div5{
+    width: 12rem;
+    height: 4rem;
+    align-self: center;
+    text-align: center;
+ }
+ .div6{
+    margin: 0;
+    padding: 0;
+
+    height: 15rem;
+    width: 21rem;
+    align-self: center;
+    background-color: rgb(206, 206, 206);
+    border-radius: 12px;
+    line-height: 18.5px;
+    box-shadow: -10px 10px 1px black;       
+
+ }
+ .div6 h3{
+    margin: 20px;
+    padding: 20px;
+    text-align: left;
+
+ }
+ .div7{
+display: flex;
+flex-direction: column;
+padding: 15px;
+ }
+ .box{
+    display: flex;
+    margin: 10px;
+    height: 7rem;
+    width: 7rem;
+    background-color: rgb(181, 180, 180);
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    box-shadow: -10px 10px 1px black; 
+    justify-content: center; /* Horizontally center the content */
+
+ }
+ 
+      }
+      
